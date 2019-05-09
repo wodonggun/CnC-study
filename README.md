@@ -61,3 +61,12 @@ ETL - Extract Transform load
 1. 
 2. 
 3. 
+
+
+
+# Aibril 챗본
+
+response = `Then respond with:`로 바로 이동
+
+if assistant recognized = 컨디션을 다 체크하고 -> 다 체크됬으면 `Then respond with`로 이동.  (다 체크가 안됬으면 계속 이어서 실행)
+
