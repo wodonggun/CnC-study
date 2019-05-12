@@ -1,0 +1,17 @@
+def solution(participant, completion):
+    answer = ''
+    dic = {}
+    for dan in completion:
+        if dan in dic:
+            dic[dan]+=1
+        else:
+            dic[dan]=1
+    
+    for dan in participant:
+        if not dan in dic or dic[dan]==0:
+            answer =dan
+            break
+        else:
+            dic[dan]-=1
+
+    return answer
