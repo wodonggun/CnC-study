@@ -1,0 +1,34 @@
+num=[]
+tar=0
+ans = 0
+
+def sol(cur,res):
+    global ans
+    if cur==len(num) or cur>len(num):
+        if res==tar:
+            ans+=1
+        return
+    t1 = res+num[cur]
+    t2 = res-num[cur]
+    sol(cur+1,t1)
+    sol(cur+1,t2)
+
+
+
+def solution(numbers, target):
+  
+    global num
+    num = numbers
+    global tar
+    tar =target
+    
+    sol(0,0)
+
+    answer = ans
+    
+    return answer
+
+
+
+
+print(solution([1, 1, 1, 1, 1],3))
