@@ -1,0 +1,17 @@
+def solution(s):
+    answer = True
+    tmp = 0
+
+    if len(s)==4 or len(s)==6:
+        try:
+            tmp = int(s)
+            
+            
+        except: 
+            answer = False
+            return answer
+    else:
+        answer = False
+        
+        
+    return answer
