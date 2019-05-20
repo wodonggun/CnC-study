@@ -1,0 +1,35 @@
+def solution(progresses, speeds):
+    answer = []
+    tmp = []
+    life = 0
+    for i in range (0,len(progresses)):
+        tmp.append([progresses[i],speeds[i]])
+
+    while(len(tmp)!=0):
+        # 프로그램 진행
+        for i in range (0,len(tmp)):
+            tmp[i][0]+=tmp[i][1]
+        
+
+        count =0
+
+        # 끝난 모듈 체크
+        for i in range (0,len(tmp)):      
+            if (tmp[0][0] >=100):
+                count+=1
+                del tmp[0]
+            else:
+                break
+        if(count!=0):
+            answer.append(count) 
+            
+               
+        # life ++
+        life+=1
+    
+  
+      
+    return answer
+
+
+print(solution([93,30,55],[1,30,5]))
